@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>فرهاد عبدی | کارشناس و پژوهشگر علوم سیاسی</title>  
+<title>فرهاد عبدی | کارشناس و پژوهشگر علوم سیاسی</title>
 <meta name="description" content="وب‌سایت شخصی فرهاد عبدی؛ مقالات، یادداشت‌ها، دیدگاه‌ها و اطلاعات درباره من.">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' fill='%23ffffff'/><path d='M0%203%20H64' stroke='%23239f40' stroke-width='6' fill='none'/><path d='M3%200%20V64' stroke='%23239f40' stroke-width='6' fill='none'/><path d='M61%200%20V64' stroke='%23da0000' stroke-width='6' fill='none'/><path d='M0%2061%20H64' stroke='%23da0000' stroke-width='6' fill='none'/><text x='32' y='45' font-family='Tahoma,sans-serif' font-size='34' font-weight='700' fill='%23000000' text-anchor='middle'>%D9%81</text></svg>">
 <script src="https://cdn.tailwindcss.com"></script>
@@ -50,6 +50,7 @@ body{font-family:'Vazirmatn',sans-serif;color:var(--text-color);background:var(-
 .hero-map{position:absolute;inset:0;width:100%;height:100%;}
 .hero-content{position:relative;z-index:2;text-align:center;padding:2rem 1rem;width:100%;}
 .hero-content h1{color:#14213a;-webkit-text-stroke:6px rgba(255,255,255,.92);paint-order:stroke fill;text-shadow:0 2px 10px rgba(255,255,255,.5);min-height:1.2em;}
+.hero-sub{color:#14213a;-webkit-text-stroke:4px rgba(255,255,255,.88);paint-order:stroke fill;text-shadow:0 1px 8px rgba(255,255,255,.5);min-height:1.4em;font-size:clamp(.95rem,2.4vw,1.25rem);font-weight:500;margin-bottom:1.5rem;}
 .hero-button{font-weight:700;padding:.8rem 2rem;border-radius:50px;color:#14213a;border:2px solid rgba(20,33,58,.7);background:rgba(255,255,255,.6);backdrop-filter:blur(2px);box-shadow:0 4px 15px rgba(0,0,0,.2);transition:all .4s cubic-bezier(.25,.8,.25,1);position:relative;overflow:hidden;text-decoration:none;display:inline-block;}
 .hero-button:hover{color:#fff;background:#14213a;border-color:#14213a;transform:translateY(-5px);box-shadow:0 8px 25px rgba(0,0,0,.25);}
 .home-rows{display:flex;flex-direction:column;gap:3rem;margin-top:1rem;}
@@ -80,14 +81,19 @@ body{font-family:'Vazirmatn',sans-serif;color:var(--text-color);background:var(-
 .post-full-meta{font-size:.8rem;color:var(--text-color-muted);margin-bottom:1.5rem;}
 .post-full-body{background:var(--bg-primary);border:1px solid var(--border-color);border-right:4px solid var(--primary-color);border-radius:.5rem;padding:1.5rem 1.75rem;line-height:2.1;text-align:justify;font-size:1rem;}
 .post-full-body p{margin-bottom:1rem;} .post-full-body p:last-child{margin-bottom:0;}
+.about-block{margin-bottom:1.75rem;}
+.about-block:last-child{margin-bottom:0;}
+.about-block h3{font-family:'Lalezar',cursive;font-size:1.35rem;color:var(--primary-color);margin-bottom:.6rem;display:flex;align-items:center;gap:.5rem;}
+.about-block h3::before{content:'';width:.55rem;height:.55rem;border-radius:50%;background:var(--secondary-color);flex:none;}
+.about-block p{line-height:2.1;text-align:justify;}
+.about-block ul{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:.6rem;}
+.about-block ul li{background:color-mix(in srgb,var(--primary-color) 12%,transparent);color:var(--primary-color);border:1px solid color-mix(in srgb,var(--primary-color) 35%,transparent);padding:.35rem .9rem;border-radius:999px;font-size:.9rem;font-weight:600;}
 .chapter-content-view{display:none;}
 .back-to-chapters{display:inline-flex;align-items:center;gap:.5rem;margin-bottom:2rem;padding:.5rem 1rem;border-radius:.375rem;background:color-mix(in srgb,var(--primary-color) 15%,transparent);color:var(--primary-color);cursor:pointer;}
 .about-avatar{width:160px;height:160px;border-radius:50%;margin:0 auto 1rem;overflow:hidden;display:grid;place-items:center;box-shadow:0 0 0 4px var(--bg-secondary),0 0 0 7px var(--primary-color),0 12px 30px var(--shadow-color);}
 .about-avatar img{width:100%;height:100%;object-fit:cover;display:block;}
 .about-avatar.no-img{background:linear-gradient(135deg,var(--primary-color),var(--secondary-color));}
 .about-avatar-fallback{font-family:'Lalezar',cursive;font-size:4.5rem;color:#fff;line-height:1;}
-.about-text{line-height:2.1;text-align:justify;}
-.about-text p{margin-bottom:1rem;} .about-text p:last-child{margin-bottom:0;}
 .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1.25rem;max-width:920px;margin:0 auto;}
 .contact-card{display:flex;flex-direction:column;align-items:center;gap:.5rem;padding:1.75rem 1rem;background:var(--bg-secondary);border-radius:.75rem;box-shadow:0 4px 18px var(--shadow-color);text-decoration:none;color:var(--text-color);border:1px solid var(--border-color);text-align:center;transition:transform .3s,box-shadow .3s,border-color .3s;}
 .contact-card:hover{transform:translateY(-6px);border-color:var(--primary-color);box-shadow:0 14px 30px var(--shadow-color);}
@@ -218,10 +224,27 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileNavLinks=document.querySelectorAll('#mobile-bottom-nav .mobile-nav-link');
   const fa=s=>String(s).replace(/\d/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d]);
   const ABOUT_IMAGE='';
-  const ABOUT_TEXT='<p>اینجا متن معرفی من قرار می‌گیرد. کافی است محتوای متغیر ABOUT_TEXT را در بالای کد ویرایش کنی.</p>';
   const HERO_TEXT='فرهاد عبدی | کارشناس و پژوهشگر علوم سیاسی';
+  const HERO_SUB='دانشجوی کارشناسی ارشد دانشگاه تهران';
   let heroTypeTimer=null;
-  function typeHero(){const el=document.getElementById('hero-typed');if(!el)return;clearTimeout(heroTypeTimer);el.textContent='';let i=0;const step=()=>{el.textContent=HERO_TEXT.slice(0,i);if(i<HERO_TEXT.length){i++;heroTypeTimer=setTimeout(step,75);}};step();}
+  function typeHero(){
+    const el=document.getElementById('hero-typed');
+    const sub=document.getElementById('hero-subtyped');
+    if(!el)return;
+    clearTimeout(heroTypeTimer);
+    el.textContent=''; if(sub)sub.textContent='';
+    let i=0;
+    const stepMain=()=>{
+      el.textContent=HERO_TEXT.slice(0,i);
+      if(i<HERO_TEXT.length){ i++; heroTypeTimer=setTimeout(stepMain,75); }
+      else if(sub){
+        let j=0;
+        const stepSub=()=>{ sub.textContent=HERO_SUB.slice(0,j); if(j<HERO_SUB.length){ j++; heroTypeTimer=setTimeout(stepSub,55); } };
+        stepSub();
+      }
+    };
+    stepMain();
+  }
   function equalizeHeroButtons(){const b=[...document.querySelectorAll('#home .hero-button')];if(b.length<2)return;b.forEach(x=>x.style.minWidth='');let m=0;b.forEach(x=>{const w=x.offsetWidth;if(w>m)m=w;});if(m>0)b.forEach(x=>x.style.minWidth=m+'px');}
 
   const ARTICLES=[
@@ -231,7 +254,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {id:'article-4',title:'رسانه و افکار عمومی',date:'1405/03/10',image:'',content:'<p>متن کامل مقالهٔ رسانه.</p>'}
   ];
   const NOTES=[
-    {id:'note-1',title:'فرق است میان جمهوری اسلامی و انقلاب اسلامی',date:'1404/11/08',image:'images/IM1.JPG',content:'notes/n1.html'},
+    {id:'note-1',title:'یادداشت نخست',date:'1405/05/25',image:'',content:'<p>متن یادداشت نخست.</p>'},
     {id:'note-2',title:'ایده‌هایی که هنوز مقاله نشده‌اند',date:'1405/04/02',image:'',content:'<p>متن یادداشت ایده‌ها.</p>'}
   ];
   const sortDesc=a=>a.slice().sort((x,y)=>y.date.localeCompare(x.date));
@@ -266,7 +289,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if(islands){ islands.setAttribute('fill','#1e6091'); islands.setAttribute('stroke','#2a8fc0'); }
   }
 
-  /* بارگذاری متن از فایلِ جدا (مثلِ آدرسِ عکس) */
   function loadNoteFile(el,url){
     fetch(url).then(r=>{ if(!r.ok) throw 0; return r.text(); }).then(t=>{
       if(/\.txt$/i.test(url)){ el.innerHTML=t.split(/\n+/).map(x=>x.trim()?`<p>${x.trim()}</p>`:'').join(''); }
@@ -284,7 +306,8 @@ document.addEventListener('DOMContentLoaded', () => {
             <!-- ⬆️ تا اینجا ⬆️ -->
           </div>
           <div class="hero-content">
-            <h1 id="hero-typed" class="text-4xl md:text-5xl font-lalezar mb-6"></h1>
+            <h1 id="hero-typed" class="text-4xl md:text-5xl font-lalezar mb-4"></h1>
+            <p id="hero-subtyped" class="hero-sub"></p>
             <div class="flex flex-wrap justify-center gap-4">
               <a href="#articles" class="nav-route hero-button">مشاهده مقالات</a>
               <a href="#notes" class="nav-route hero-button">مشاهده یادداشت‌ها</a>
@@ -297,8 +320,8 @@ document.addEventListener('DOMContentLoaded', () => {
         <section class="home-row"><h3 class="home-row-title">یادداشت‌ها</h3><div class="home-row-cards" id="home-notes"></div></section>
       </div>`;
     styleIranMap();
-    document.getElementById('articles').innerHTML=`<div id="article-selection-view"><h2 class="text-4xl font-lalezar mb-8 text-center">مقالات</h2><p class="text-center text-[var(--text-color-muted)] mb-10 max-w-3xl mx-auto">مقالات و تحلیل‌ها بر اساس موضوع دسته‌بندی می‌شوند. با انتخاب هر کارت، نوشتهٔ مرتبط را مشاهده کنید.</p><div id="article-cards" class="posts-list"></div></div><div id="article-content-view" class="chapter-content-view"><button class="back-to-chapters" data-back="articles"><ion-icon name="arrow-forward-outline"></ion-icon> بازگشت به فهرست مقالات</button><div class="post-reader"></div></div>`;
-    document.getElementById('notes').innerHTML=`<div id="note-selection-view"><h2 class="text-4xl font-lalezar mb-8 text-center">یادداشت‌ها</h2><p class="text-center text-[var(--text-color-muted)] mb-10 max-w-3xl mx-auto">نوشته‌های کوتاه‌تر، ایده‌ها و برداشت‌هایی که در مسیر فکری من شکل می‌گیرند.</p><div id="note-cards" class="posts-list"></div></div><div id="note-content-view" class="chapter-content-view"><button class="back-to-chapters" data-back="notes"><ion-icon name="arrow-forward-outline"></ion-icon> بازگشت به فهرست یادداشت‌ها</button><div class="post-reader"></div></div>`;
+    document.getElementById('articles').innerHTML=`<div id="article-selection-view"><h2 class="text-4xl font-lalezar mb-8 text-center">مقالات</h2><div id="article-cards" class="posts-list"></div></div><div id="article-content-view" class="chapter-content-view"><button class="back-to-chapters" data-back="articles"><ion-icon name="arrow-forward-outline"></ion-icon> بازگشت به فهرست مقالات</button><div class="post-reader"></div></div>`;
+    document.getElementById('notes').innerHTML=`<div id="note-selection-view"><h2 class="text-4xl font-lalezar mb-8 text-center">یادداشت‌ها</h2><div id="note-cards" class="posts-list"></div></div><div id="note-content-view" class="chapter-content-view"><button class="back-to-chapters" data-back="notes"><ion-icon name="arrow-forward-outline"></ion-icon> بازگشت به فهرست یادداشت‌ها</button><div class="post-reader"></div></div>`;
     document.getElementById('contact-us').innerHTML=`<div class="py-16"><h2 class="text-4xl font-lalezar mb-4 text-center">تماس با من</h2><p class="text-center text-[var(--text-color-muted)] mb-12 max-w-2xl mx-auto">برای ارتباط حرفه‌ای، گفت‌وگو درباره نوشته‌ها یا همکاری، از راه‌های زیر با من در تماس باشید.</p><div class="contact-grid">
       <a class="contact-card" href="mailto:farhadabdi8181@gmail.com"><ion-icon name="mail-outline"></ion-icon><span class="c-name">ایمیل</span><span class="c-id">farhadabdi8181@gmail.com</span></a>
       <a class="contact-card" href="https://t.me/farhadabdi1381" target="_blank" rel="noopener"><svg class="tg-icon" viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg><span class="c-name">تلگرام</span><span class="c-id">@farhadabdi1381</span></a>
@@ -307,7 +330,11 @@ document.addEventListener('DOMContentLoaded', () => {
     </div></div>`;
     const avatarInner=ABOUT_IMAGE?`<img src="${ABOUT_IMAGE}" alt="فرهاد عبدی">`:`<span class="about-avatar-fallback">ف</span>`;
     const avatarClass=ABOUT_IMAGE?'about-avatar':'about-avatar no-img';
-    document.getElementById('about-us').innerHTML=`<div class="py-12"><div class="max-w-4xl mx-auto"><div class="text-center mb-12"><div class="${avatarClass}">${avatarInner}</div><h2 class="text-4xl font-lalezar mt-4 mb-2">درباره من</h2><p class="text-lg text-[var(--text-color-muted)]">فرهاد عبدی | علاقه‌مند به علوم سیاسی، نوشتن و تحلیل</p></div><div class="bg-[var(--bg-secondary)] p-8 rounded-lg shadow-lg"><div class="about-text">${ABOUT_TEXT}</div></div></div></div>`;
+    document.getElementById('about-us').innerHTML=`<div class="py-12"><div class="max-w-4xl mx-auto"><div class="text-center mb-12"><div class="${avatarClass}">${avatarInner}</div><h2 class="text-4xl font-lalezar mt-4 mb-2">درباره من</h2><p class="text-lg text-[var(--text-color-muted)]">فرهاد عبدی | علاقه‌مند به علوم سیاسی، نوشتن و تحلیل</p></div><div class="bg-[var(--bg-secondary)] p-8 rounded-lg shadow-lg">
+      <div class="about-block"><h3>معرفی کوتاه</h3><p>فرهاد عبدی، دانشجوی کارشناسی ارشد علوم سیاسی دانشگاه تهران و پژوهشگر حوزهٔ سیاست است؛ علاقه‌مند به نوشتن، تحلیل و گفت‌وگو دربارهٔ سیاست و جامعه.</p></div>
+      <div class="about-block"><h3>حوزه‌های مورد علاقه</h3><ul><li>سیاست و حکومت</li><li>اندیشهٔ سیاسی</li><li>جامعه و سیاست</li><li>رسانه و افکار عمومی</li></ul></div>
+      <div class="about-block"><h3>هدف سایت</h3><p>این وب‌سایت فضایی شخصی برای انتشار مقالات، یادداشت‌ها و تحلیل‌هایی است که در مسیر پژوهشی من شکل می‌گیرند؛ تلاشی برای اندیشیدنِ دقیق‌تر و گفت‌وگوی سالم‌تر دربارهٔ سیاست و جامعه.</p></div>
+    </div></div></div>`;
     document.getElementById('article-cards').innerHTML=sortDesc(ARTICLES).map(a=>postCard(a,'articles')).join('');
     document.getElementById('note-cards').innerHTML=sortDesc(NOTES).map(n=>postCard(n,'notes')).join('');
     document.getElementById('home-articles').innerHTML=sortDesc(ARTICLES).slice(0,3).map(a=>postCard(a,'articles')).join('')+`<a href="#articles" class="nav-route home-more">بیشتر بخوانید</a>`;
