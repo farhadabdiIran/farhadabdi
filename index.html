@@ -224,8 +224,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileNavLinks=document.querySelectorAll('#mobile-bottom-nav .mobile-nav-link');
   const fa=s=>String(s).replace(/\d/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d]);
   const ABOUT_IMAGE='';
-  const HERO_TEXT='فرهاد عبدی | کارشناس و پژوهشگر علوم سیاسی';
-  const HERO_SUB='دانشجوی کارشناسی ارشد دانشگاه تهران';
+  const HERO_TEXT='فرهاد عبدی | پژوهشگر علوم سیاسی';
+  const HERO_SUB='دانشجوی کارشناسی ارشد علوم سیاسی دانشگاه تهران';
   let heroTypeTimer=null;
   function typeHero(){
     const el=document.getElementById('hero-typed');
@@ -248,10 +248,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function equalizeHeroButtons(){const b=[...document.querySelectorAll('#home .hero-button')];if(b.length<2)return;b.forEach(x=>x.style.minWidth='');let m=0;b.forEach(x=>{const w=x.offsetWidth;if(w>m)m=w;});if(m>0)b.forEach(x=>x.style.minWidth=m+'px');}
 
   const ARTICLES=[
-    {id:'article-1',title:'سیاست و حکومت',date:'1405/06/01',image:'',content:'<p>متن کامل مقالهٔ سیاست و حکومت.</p>'},
-    {id:'article-2',title:'اندیشه سیاسی',date:'1405/05/20',image:'',content:'<p>متن کامل مقالهٔ اندیشه سیاسی.</p>'},
-    {id:'article-3',title:'جامعه و سیاست',date:'1405/04/15',image:'',content:'<p>متن کامل مقالهٔ جامعه و سیاست.</p>'},
-    {id:'article-4',title:'رسانه و افکار عمومی',date:'1405/03/10',image:'',content:'<p>متن کامل مقالهٔ رسانه.</p>'}
+    {id:'article-1',title:'سیاست و حکومت',date:'1405/06/01',image:'',content:'<p>به زودی منتشر خواهد شد...</p>'}
   ];
   const NOTES=[
     {id:'note-1',title:'بذر طوفان',date:'1405/05/12',image:'images/PARCHAM.JPG',content:'notes/bazrehtoofan.html'},
